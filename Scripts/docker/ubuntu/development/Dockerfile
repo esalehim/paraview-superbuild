@@ -50,15 +50,15 @@
 #     "Release", or "Debug" (Default: "Release")
 #
 
-ARG BASE_IMAGE=nvidia/opengl:1.0-glvnd-devel-ubuntu18.04
+ARG BASE_IMAGE=ubuntu:18.04
 FROM ${BASE_IMAGE}
 
-ARG RENDERING=egl
-ARG PARAVIEW_TAG=v5.8.0
-ARG SUPERBUILD_TAG=v5.8.0
-ARG PARAVIEW_VERSION_STRING=paraview-5.8
-ARG SUPERBUILD_REPO=https://gitlab.kitware.com/paraview/paraview-superbuild.git
-ARG PYTHON_VERSION=2
+ARG RENDERING=osmesa
+ARG PARAVIEW_TAG=v5.7.0
+ARG SUPERBUILD_TAG=resoptima.pvwserver5.7
+ARG PARAVIEW_VERSION_STRING=paraview-5.7
+ARG SUPERBUILD_REPO=https://github.com/esalehim/paraview-superbuild.git
+ARG PYTHON_VERSION=3
 ARG BUILD_TYPE=Release
 
 # The following environment variables help with the Python 2 vs 3 option while
