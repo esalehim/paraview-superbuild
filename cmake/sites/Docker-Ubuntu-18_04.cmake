@@ -1,4 +1,3 @@
-
 # Where should ParaView get installed
 set(CMAKE_INSTALL_PREFIX "/opt/paraview" CACHE PATH "")
 
@@ -42,7 +41,7 @@ set(ENABLE_launchers OFF CACHE BOOL "")
 # Some general options
 set(BUILD_SHARED_LIBS ON CACHE BOOL "")
 set(CMAKE_BUILD_TYPE $ENV{BUILD_TYPE} CACHE STRING "")
-set(BUILD_TESTING ON CACHE BOOL "")
+set(BUILD_TESTING OFF CACHE BOOL "")
 
 # ParaView related
 set(ENABLE_paraview ON CACHE BOOL "")
@@ -66,11 +65,11 @@ else()
   set(USE_SYSTEM_python3 ON CACHE BOOL "")
 endif()
 set(USE_SYSTEM_pythonsetuptools ON CACHE BOOL "")
-set(ENABLE_matplotlib ON CACHE BOOL "")
-set(ENABLE_scipy ON CACHE BOOL "")
+set(ENABLE_matplotlib OFF CACHE BOOL "")
+set(ENABLE_scipy OFF CACHE BOOL "")
 
 # VTK-m related
-set(ENABLE_vtkm ON CACHE BOOL "")
+set(ENABLE_vtkm OFF CACHE BOOL "")
 set(vtkm_SOURCE_SELECTION for-git CACHE STRING "")
 
 # Disable Qt5 stuff
@@ -78,30 +77,30 @@ set(ENABLE_qt5 OFF CACHE BOOL "")
 set(USE_SYSTEM_qt5 OFF CACHE BOOL "")
 
 # Other options
-set(ENABLE_ospray ON CACHE BOOL "")
+set(ENABLE_ospray OFF CACHE BOOL "")
 set(ENABLE_netcdf OFF CACHE BOOL "")
-set(ENABLE_hdf5 ON CACHE BOOL "")
-set(ENABLE_szip ON CACHE BOOL "")
-set(ENABLE_visitbridge ON CACHE BOOL "")
-set(ENABLE_ffmpeg ON CACHE BOOL "")
-set(ENABLE_vistrails ON CACHE BOOL "")
-set(ENABLE_mpi ON CACHE BOOL "")
-set(ENABLE_silo ON CACHE BOOL "")
-set(ENABLE_xdmf3 ON CACHE BOOL "")
-set(ENABLE_h5py ON CACHE BOOL "")
+set(ENABLE_hdf5 OFF CACHE BOOL "")
+set(ENABLE_szip OFF CACHE BOOL "")
+set(ENABLE_visitbridge OFF CACHE BOOL "")
+set(ENABLE_ffmpeg OFF CACHE BOOL "")
+set(ENABLE_vistrails OFF CACHE BOOL "")
+set(ENABLE_mpi OFF CACHE BOOL "")
+set(ENABLE_silo OFF CACHE BOOL "")
+set(ENABLE_xdmf3 OFF CACHE BOOL "")
+set(ENABLE_h5py OFF CACHE BOOL "")
 set(ENABLE_numpy ON CACHE BOOL "")
-set(ENABLE_cosmotools ON CACHE BOOL "")
+set(ENABLE_cosmotools OFF CACHE BOOL "")
 set(DIY_SKIP_SVN ON CACHE BOOL "")
 set(ENABLE_glu ON CACHE BOOL "")
 set(ENABLE_tbb ON CACHE BOOL "")
 set(ENABLE_boost ON CACHE BOOL "")
 set(ENABLE_vortexfinder2 OFF CACHE BOOL "")
 set(USE_NONFREE_COMPONENTS ON CACHE BOOL "")
-set(ENABLE_las ON CACHE BOOL "")
-set(ENABLE_acusolve ON CACHE BOOL "")
+set(ENABLE_las OFF CACHE BOOL "")
+set(ENABLE_acusolve OFF CACHE BOOL "")
 set(ENABLE_fontconfig ON CACHE BOOL "")
 
 # FIXME: We should be able to have these, but they didn't work at some point
 set(ENABLE_vrpn OFF CACHE BOOL "")
 
-set(CTEST_USE_LAUNCHERS TRUE CACHE BOOL "")
+set(CTEST_USE_LAUNCHERS FALSE CACHE BOOL "")
