@@ -22,7 +22,7 @@
 #         .
 #
 
-ARG BASE_IMAGE=nvidia/opengl:1.0-glvnd-devel-ubuntu18.04
+ARG BASE_IMAGE=ubuntu:18.04
 ARG PV_DEV_BASE_IMAGE=pv-dev-image
 
 # Start with the pv development image so we can copy from it
@@ -32,7 +32,7 @@ FROM ${PV_DEV_BASE_IMAGE} AS devimage
 FROM ${BASE_IMAGE} AS baseimage
 
 # Now install python the same same way we did in the base
-ARG PYTHON_VERSION=2
+ARG PYTHON_VERSION=3
 
 # The following environment variables help with the Python 2 vs 3 option while
 # we still support both of them.  In order for this approach to work, we need
